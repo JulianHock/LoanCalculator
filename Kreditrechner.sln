@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kreditrechner", "Kreditrechner\Kreditrechner.csproj", "{3E038506-B99D-4200-A2A4-20A31C97C667}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3E038506-B99D-4200-A2A4-20A31C97C667}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E038506-B99D-4200-A2A4-20A31C97C667}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E038506-B99D-4200-A2A4-20A31C97C667}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E038506-B99D-4200-A2A4-20A31C97C667}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CC862F6B-4424-493F-BAEA-A7E7A7FDECEB}
+	EndGlobalSection
+EndGlobal
