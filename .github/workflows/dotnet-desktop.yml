@@ -15,7 +15,7 @@ jobs:
 
     strategy:
       matrix:
-        configuration: [Debug, Release]
+        configuration: [Release]
 
     runs-on: windows-latest
 
@@ -30,23 +30,28 @@ jobs:
       with:
         fetch-depth: 0
 
-    # Install the .NET Core workload
     - name: Install .NET Core
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 6.0.x
 
-    # Add  MSBuild to the PATH: https://github.com/microsoft/setup-msbuild
     - name: Setup MSBuild.exe
       uses: microsoft/setup-msbuild@v1.0.2
 
-    # Restore the application to populate the obj folder with RuntimeIdentifiers
     - name: Restore the application
       run: msbuild $env:Solution_Name /t:Restore /p:Configuration=$env:Configuration
       env:
         Configuration: ${{ matrix.configuration }}
 
-    # Create the app package by building and packaging the Windows Application Packaging project
+    - name: Extract assembly version
+      id: extract-version
+      run: |
+        $versionLine = Get-Content -Path ./Kreditrechner/Properties/AssemblyInfo.cs | Select-String -Pattern '^\[assembly: AssemblyVersion'
+        $version = $versionLine -replace '.*\("(.*)\..*"\).*', '$1'
+        $formatted_version = "V-$version"
+        echo "Extracted Version: $formatted_version"
+        echo "##[set-output name=VERSION]$formatted_version"
+
     - name: Create the app package
       run: msbuild $env:Wap_Project_Path /p:Configuration=$env:Configuration /p:UapAppxPackageBuildMode=$env:Appx_Package_Build_Mode /p:AppxBundle=$env:Appx_Bundle /p:PackageCertificateKeyFile=GitHubActionsWorkflow.pfx /p:PackageCertificatePassword=${{ secrets.Pfx_Key }}
       env:
@@ -55,9 +60,25 @@ jobs:
         Appx_Package_Build_Mode: StoreUpload
         Configuration: ${{ matrix.configuration }}
 
-    # Upload the MSIX package: https://github.com/marketplace/actions/upload-a-build-artifact
+    - name: Zip artifacts
+      run: |
+        $directoryToZip = "./Kreditrechner/bin"
+        $zipFileName = "LoanCalculator.zip"
+        Compress-Archive -Path $directoryToZip -DestinationPath $zipFileName
+
+    - name: Set Tag and make release
+      if: github.ref == 'refs/heads/master'
+      run: |
+        echo "${{ steps.extract-version.outputs.VERSION }}"
+        git tag ${{ steps.extract-version.outputs.VERSION }}
+        git push origin ${{ steps.extract-version.outputs.VERSION }}
+
+        gh release create ${{ steps.extract-version.outputs.VERSION }} ./LoanCalculator.zip --title "LoanCalculator_${{ steps.extract-version.outputs.VERSION }}"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
     - name: Upload build artifacts
       uses: actions/upload-artifact@v3
       with:
         name: LoanCalculator
-        path: ${{ env.Wap_Project_Directory }}\bin
+        path: LoanCalculator.zip
