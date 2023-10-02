@@ -7,9 +7,10 @@
         xmlns:vm="clr-namespace:Kreditrechner.ViewModel"
         xmlns:vw="clr-namespace:Kreditrechner.View"
         xmlns:vc="clr-namespace:Kreditrechner.ValueConverter"
+        xmlns:loc="clr-namespace:Kreditrechner.Properties"
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         mc:Ignorable="d"
-        Title="Kreditrechner" MinHeight="450" Height="650" MinWidth="1200" Width="1200" WindowStartupLocation="CenterScreen"
+        Title="{x:Static loc:Resources.Title}" MinHeight="450" Height="650" MinWidth="1200" Width="1200" WindowStartupLocation="CenterScreen"
         d:DataContext="{d:DesignInstance vm:MainWindowViewModel, IsDesignTimeCreatable=True}">
 
   <Window.Resources>
@@ -37,27 +38,27 @@
     <Border Grid.Row="4" Grid.RowSpan="2" Grid.Column="1" BorderBrush="Black" BorderThickness="0.5"/>
 
     <Menu Grid.ColumnSpan="2">
-      <MenuItem Header="Datei">
-        <MenuItem Header="Laden" Command="{Binding LoadCommand}">
+      <MenuItem Header="{x:Static loc:Resources.MenuBarFile}">
+        <MenuItem Header="{x:Static loc:Resources.MenuBarLoad}" Command="{Binding LoadCommand}">
           <MenuItem.Icon>
             <Image Source="Icons/load.png"/>
           </MenuItem.Icon>
         </MenuItem>
-        <MenuItem Header="Speichern" Command="{Binding SaveCommand}">
+        <MenuItem Header="{x:Static loc:Resources.MenuBarSave}" Command="{Binding SaveCommand}">
           <MenuItem.Icon>
             <Image Source="Icons/save.png"/>
           </MenuItem.Icon>
         </MenuItem>
       </MenuItem>
-      <MenuItem Header="Extras">
-        <MenuItem Header="Mindestrate berechnen..." Command="{Binding MinimumRepaymentCommand}">
+      <MenuItem Header="{x:Static loc:Resources.MenuBarExtras}">
+        <MenuItem Header="{x:Static loc:Resources.MenuBarCalculateMinimumRate}" Command="{Binding MinimumRepaymentCommand}">
           <MenuItem.Icon>
             <Image Source="Icons/euro.png"/>
           </MenuItem.Icon>
         </MenuItem>
       </MenuItem>
-      <MenuItem Header="Hilfe">
-        <MenuItem Header="Info..." Click="InfoClicked">
+      <MenuItem Header="{x:Static loc:Resources.MenuBarHelp}">
+        <MenuItem Header="{x:Static loc:Resources.MenuBarAbout}" Click="InfoClicked">
           <MenuItem.Icon>
             <Image Source="Icons/info.png"/>
           </MenuItem.Icon>

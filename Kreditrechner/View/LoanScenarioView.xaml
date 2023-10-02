@@ -50,35 +50,53 @@
 
       <Label Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Content="{x:Static loc:Resources.LoanAmount}"/>
       <TextBox Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" MinWidth="120" VerticalAlignment="Center" Text="{Binding LoanAmount, Converter={StaticResource currencyConverter}}" GotFocus="TextBox_GotFocus">
-        <TextBox.ToolTip>Betrag des Kredits</TextBox.ToolTip>
+        <TextBox.ToolTip>
+          <TextBlock Text="{x:Static loc:Resources.LoanAmountToolTip}"/>
+        </TextBox.ToolTip>
       </TextBox>
       <Label Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Center" Content="{x:Static loc:Resources.Interest}"/>
       <TextBox Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" MinWidth="120" VerticalAlignment="Center" Text="{Binding Interest, Converter={StaticResource percentConverter}}" GotFocus="TextBox_GotFocus">
-        <TextBox.ToolTip>Höhe des effektiven Jahreszinses</TextBox.ToolTip>
+        <TextBox.ToolTip>
+          <TextBlock Text="{x:Static loc:Resources.InterestToolTip}"/>
+        </TextBox.ToolTip>
       </TextBox>
       <RadioButton Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5" IsChecked="{Binding IsRate}" Content="{x:Static loc:Resources.Rate}">
-        <RadioButton.ToolTip>Laufzeit bei gegebener Rate berechnen</RadioButton.ToolTip>
+        <RadioButton.ToolTip>
+          <TextBlock Text="{x:Static loc:Resources.RateToolTip}"/>
+        </RadioButton.ToolTip>
       </RadioButton>
       <TextBox Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" MinWidth="120" VerticalAlignment="Center" Text="{Binding Rate, Converter={StaticResource currencyConverter}}" IsReadOnly="{Binding IsTerm}" Background="{Binding BackgroundRate}" GotFocus="TextBox_GotFocus">
-        <TextBox.ToolTip>Monatliche Rate die zurückgezahlt wird</TextBox.ToolTip>
+        <TextBox.ToolTip>
+          <TextBlock Text="{x:Static loc:Resources.RateResultToolTip}"/>
+        </TextBox.ToolTip>
       </TextBox>
       <RadioButton Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5" IsChecked="{Binding IsTerm}" Content="{x:Static loc:Resources.Term}">
-        <RadioButton.ToolTip>Rate bei gegebener Laufzeit berechnen</RadioButton.ToolTip>
+        <RadioButton.ToolTip>
+          <TextBlock Text="{x:Static loc:Resources.TermToolTip}"/>
+        </RadioButton.ToolTip>
       </RadioButton>
       <TextBox Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" MinWidth="120" VerticalAlignment="Center" Text="{Binding Term, Converter={StaticResource yearConverter}}" IsReadOnly="{Binding IsRate}" Background="{Binding BackgroundTerm}" GotFocus="TextBox_GotFocus">
-        <TextBox.ToolTip>Laufzeit des Kredits</TextBox.ToolTip>
+        <TextBox.ToolTip>
+          <TextBlock Text="{x:Static loc:Resources.TermResultToolTip}"/>
+        </TextBox.ToolTip>
       </TextBox>
       <Label Grid.Row="0" Grid.Column="3" HorizontalAlignment="Right" VerticalAlignment="Center" Content="{x:Static loc:Resources.TotalInterest}"/>
       <TextBox Grid.Row="0" Grid.Column="4" HorizontalAlignment="Left" VerticalAlignment="Center" MinWidth="120" IsReadOnly="True" Text="{Binding InterestTotal, Converter={StaticResource currencyConverter}}" GotFocus="TextBox_GotFocus">
-        <TextBox.ToolTip>Summe der Zinsen die über die Laufzeit gezahlt werden müssen</TextBox.ToolTip>
+        <TextBox.ToolTip>
+          <TextBlock Text="{x:Static loc:Resources.TotalInterestToolTip}"/>
+        </TextBox.ToolTip>
       </TextBox>
       <Label Grid.Row="1" Grid.Column="3" HorizontalAlignment="Right" VerticalAlignment="Center" Content="{x:Static loc:Resources.TotalRepayment}"/>
       <TextBox Grid.Row="1" Grid.Column="4" HorizontalAlignment="Left" VerticalAlignment="Center" MinWidth="120" IsReadOnly="True" Text="{Binding SumTotal, Converter={StaticResource currencyConverter}}" GotFocus="TextBox_GotFocus">
-        <TextBox.ToolTip>Gesamtsumme inkl. Zinsen, die über die Laufzeit zurückgezahlt werden muss</TextBox.ToolTip>
+        <TextBox.ToolTip>
+          <TextBlock Text="{x:Static loc:Resources.TotalRepaymentToolTip}"/>
+        </TextBox.ToolTip>
       </TextBox>
       <Label Grid.Row="2" Grid.Column="3" HorizontalAlignment="Right" VerticalAlignment="Center" Content="{x:Static loc:Resources.RepaymentAtBegin}"/>
       <TextBox Grid.Row="2" Grid.Column="4" HorizontalAlignment="Left" VerticalAlignment="Center" MinWidth="120" IsReadOnly="True" Text="{Binding RepaymentAtBegin, Converter={StaticResource percentConverter}}" GotFocus="TextBox_GotFocus">
-        <TextBox.ToolTip>Höhe der Tilgung der Gesamtsumme im ersten Monat gesehen auf das gesamte Jahr</TextBox.ToolTip>
+        <TextBox.ToolTip>
+          <TextBlock Text="{x:Static loc:Resources.RepaymentAtBeginToolTip}"/>
+        </TextBox.ToolTip>
       </TextBox>
       <Label Grid.Row="2" Grid.Column="2" Content="{Binding DifferenceRate, Converter={StaticResource diffCurrencyConverter}}" Foreground="{Binding RateDifferenceColor}"/>
       <Label Grid.Row="3" Grid.Column="2" Content="{Binding DifferenceTerm, Converter={StaticResource diffYearConverter}}" Foreground="{Binding TermDifferenceColor}"/>
@@ -87,7 +105,9 @@
     </Grid>
 
     <Button Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="15" Padding="5" Command="{Binding CalculateCommand}" Click="SetButtonFocus" IsDefault="True" Content="{x:Static loc:Resources.Calculate}">
-      <Button.ToolTip>Kreditszenario berechnen</Button.ToolTip>
+      <Button.ToolTip>
+        <TextBlock Text="{x:Static loc:Resources.CalculateButtonToolTip}"/>
+      </Button.ToolTip>
     </Button>
   </Grid>
 </UserControl>
