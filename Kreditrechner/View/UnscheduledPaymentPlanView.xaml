@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="Kreditrechner.View.SondertilgungsplanView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Kreditrechner.View"
+             xmlns:vm="clr-namespace:Kreditrechner.ViewModel"
+             xmlns:vc="clr-namespace:Kreditrechner.ValueConverter"
+             xmlns:loc="clr-namespace:Kreditrechner.Properties"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" d:DataContext="{d:DesignInstance vm:UnscheduledPaymentPlanViewModel, IsDesignTimeCreatable=True}">
+
+  <UserControl.Resources>
+    <vc:CurrencyConverter x:Key="currencyConverter"/>
+    <vc:PercentConverter x:Key="percentConverter"/>
+    <vc:YearConverter x:Key="yearConverter"/>
+    <vc:DateConverter x:Key="dateConverter"/>
+  </UserControl.Resources>
+  
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="auto"/>
+      <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+
+    <Label Grid.Row="0" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="LightGray" Margin="1">
+      <TextBlock TextDecorations="Underline" Text="{x:Static loc:Resources.UnscheduledPaymentPlan}"/>
+    </Label>
+
+    <DataGrid Grid.Row="1" ItemsSource="{Binding UnscheduledPayments}" AutoGenerateColumns="False" AlternatingRowBackground="AliceBlue"
+              IsReadOnly="True" GridLinesVisibility="None" HeadersVisibility="Column" SelectedItem="{Binding SelectedUnscheduledPayment}">
+      <DataGrid.Columns>
+        <DataGridTextColumn Header="{x:Static loc:Resources.MonthUnscheduledRepaymentPlan}" Binding="{Binding Month}" Width="auto"/>
+        <DataGridTextColumn Header="{x:Static loc:Resources.AmountUnscheduledRepaymentPlan}" Binding="{Binding Amount, Converter={StaticResource currencyConverter}}" Width="*"/>
+      </DataGrid.Columns>
+    </DataGrid>
+    
+  </Grid>
+</UserControl>

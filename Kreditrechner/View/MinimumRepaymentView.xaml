@@ -1,0 +1,60 @@
+﻿<Window x:Class="Kreditrechner.View.MindesttilgungView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kreditrechner.ViewModel"
+        xmlns:vc="clr-namespace:Kreditrechner.ValueConverter"
+        xmlns:loc="clr-namespace:Kreditrechner.Properties"
+        mc:Ignorable="d"
+        Title="Mindestrate berechnen" Height="250" Width="400" WindowStartupLocation="CenterOwner">
+
+  <Window.DataContext>
+    <local:MinimumRepaymentViewModel/>
+  </Window.DataContext>
+
+  <Window.Resources>
+    <vc:CurrencyConverter x:Key="currencyConverter"/>
+    <vc:PercentConverter x:Key="percentConverter"/>
+    <vc:YearConverter x:Key="yearConverter"/>
+    <vc:DateConverter x:Key="dateConverter"/>
+  </Window.Resources>
+
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition/>
+      <RowDefinition/>
+      <RowDefinition/>
+      <RowDefinition/>
+      <RowDefinition/>
+      <RowDefinition/>
+    </Grid.RowDefinitions>
+
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition/>
+      <ColumnDefinition/>
+    </Grid.ColumnDefinitions>
+
+    <Label Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Content="{x:Static loc:Resources.LoanAmount}"/>
+    <Label Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Content="{x:Static loc:Resources.MinimumRepayment}"/>
+    <Label Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Content="{x:Static loc:Resources.Interest}"/>
+    <TextBox Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" MinWidth="120" VerticalAlignment="Center" Text="{Binding LoanAmount, Converter={StaticResource currencyConverter}}" GotFocus="TextBox_GotFocus">
+      <TextBox.ToolTip>Betrag des Kredits</TextBox.ToolTip>
+    </TextBox>
+    <TextBox Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" MinWidth="120" VerticalAlignment="Center" Text="{Binding MinimumRepayment, Converter={StaticResource percentConverter}}" GotFocus="TextBox_GotFocus">
+      <TextBox.ToolTip>Höhe der Mindesttilgung</TextBox.ToolTip>
+    </TextBox>
+    <TextBox Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" MinWidth="120" VerticalAlignment="Center" Text="{Binding Interest, Converter={StaticResource percentConverter}}" GotFocus="TextBox_GotFocus">
+      <TextBox.ToolTip>Höhe des effektiven Jahreszinses</TextBox.ToolTip>
+    </TextBox>
+
+    <Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="5" Click="SetButtonFocus" IsDefault="True" Command="{Binding CalculateCommand}" Content="{x:Static loc:Resources.Calculate}">
+      <Button.ToolTip>Mindestrate berechnen</Button.ToolTip>
+    </Button>
+
+    <Label Grid.Row="4" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Content="{x:Static loc:Resources.MinimumMonthlyRate}"/>
+    <TextBox Grid.Row="4" Grid.Column="1" HorizontalAlignment="Left" MinWidth="120" VerticalAlignment="Center" Text="{Binding MinimumMonthlyRate, Converter={StaticResource currencyConverter}}" GotFocus="TextBox_GotFocus">
+      <TextBox.ToolTip>Betrag der monatlich mindestens gezahlt werden muss, um Mindesttilgung zu erfüllen</TextBox.ToolTip>
+    </TextBox>
+  </Grid>
+</Window>

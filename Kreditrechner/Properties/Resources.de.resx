@@ -118,46 +118,46 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Add" xml:space="preserve">
-    <value>Add</value>
+    <value>Hinzufügen</value>
   </data>
   <data name="Amount" xml:space="preserve">
-    <value>Amount:</value>
+    <value>Betrag:</value>
   </data>
   <data name="AmountUnscheduledRepaymentPlan" xml:space="preserve">
-    <value>Amount</value>
+    <value>Betrag</value>
   </data>
   <data name="Calculate" xml:space="preserve">
-    <value>Calculate</value>
+    <value>Berechnen</value>
   </data>
   <data name="DateInstallmentPlan" xml:space="preserve">
-    <value>Date</value>
+    <value>Datum</value>
   </data>
   <data name="InstallmentPlan" xml:space="preserve">
-    <value>Installment Plan</value>
+    <value>Ratenplan</value>
   </data>
   <data name="Interest" xml:space="preserve">
-    <value>Debit Interest p.A.:</value>
+    <value>Sollzins p.A.:</value>
   </data>
   <data name="InterestInstallmentPlan" xml:space="preserve">
-    <value>Interest</value>
+    <value>Zinsen</value>
   </data>
   <data name="LoanAmount" xml:space="preserve">
-    <value>Loan Amount:</value>
+    <value>Kreditbetrag:</value>
   </data>
   <data name="LoanScenario" xml:space="preserve">
-    <value>Loan Scenario</value>
+    <value>Kreditszenario</value>
   </data>
   <data name="MinimumMonthlyRate" xml:space="preserve">
-    <value>Minimum montly rate:</value>
+    <value>Mindestrate:</value>
   </data>
   <data name="MinimumRepayment" xml:space="preserve">
-    <value>Minimum Repayment:</value>
+    <value>Mindesttilgung:</value>
   </data>
   <data name="Month" xml:space="preserve">
-    <value>Month:</value>
+    <value>Monat:</value>
   </data>
   <data name="MonthUnscheduledRepaymentPlan" xml:space="preserve">
-    <value>Month</value>
+    <value>Monat</value>
   </data>
   <data name="Number" xml:space="preserve">
     <value>#</value>
@@ -169,33 +169,33 @@
     <value>Rate</value>
   </data>
   <data name="RemainingDebtInstallmentPlan" xml:space="preserve">
-    <value>Remaining debt</value>
+    <value>Restschuld</value>
   </data>
   <data name="Remove" xml:space="preserve">
-    <value>Remove</value>
+    <value>Entfernen</value>
   </data>
   <data name="RepaymentAtBegin" xml:space="preserve">
-    <value>Repayment at begin:</value>
+    <value>Anfängliche Tilgung:</value>
   </data>
   <data name="RepaymentInstallmentPlan" xml:space="preserve">
-    <value>Repayment</value>
+    <value>Tilgung</value>
   </data>
   <data name="Term" xml:space="preserve">
-    <value>Term:</value>
+    <value>Laufzeit:</value>
   </data>
   <data name="TotalInterest" xml:space="preserve">
-    <value>Total Interest:</value>
+    <value>Gesamt Zinsen:</value>
   </data>
   <data name="TotalRepayment" xml:space="preserve">
-    <value>Total Repayment:</value>
+    <value>Gesamt Rückzahlung:</value>
   </data>
   <data name="TypeInstallmentPlan" xml:space="preserve">
-    <value>Type</value>
+    <value>Art</value>
   </data>
   <data name="UnscheduledPayment" xml:space="preserve">
-    <value>Unscheduled Payment</value>
+    <value>Sondertilgung</value>
   </data>
   <data name="UnscheduledPaymentPlan" xml:space="preserve">
-    <value>Unscheduled Payments Plan</value>
+    <value>Sondertilgungsplan</value>
   </data>
 </root>

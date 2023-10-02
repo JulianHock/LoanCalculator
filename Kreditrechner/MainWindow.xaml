@@ -3,10 +3,72 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Kreditrechner"
+        xmlns:local="clr-namespace:Kreditrechner.View"
+        xmlns:vm="clr-namespace:Kreditrechner.ViewModel"
+        xmlns:vw="clr-namespace:Kreditrechner.View"
+        xmlns:vc="clr-namespace:Kreditrechner.ValueConverter"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Kreditrechner" MinHeight="450" Height="650" MinWidth="1200" Width="1200" WindowStartupLocation="CenterScreen"
+        d:DataContext="{d:DesignInstance vm:MainWindowViewModel, IsDesignTimeCreatable=True}">
+
+  <Window.Resources>
+    <vc:CurrencyConverter x:Key="currencyConverter"/>
+    <vc:PercentConverter x:Key="percentConverter"/>
+    <vc:YearConverter x:Key="yearConverter"/>
+    <vc:DateConverter x:Key="dateConverter"/>
+  </Window.Resources>
+
   <Grid>
-    <Label>Kreditsumme</Label>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="auto"/>
+      <RowDefinition Height="auto"/>
+      <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="2*"/>
+      <ColumnDefinition Width="*"/>
+    </Grid.ColumnDefinitions>
+
+    <Border Grid.Row="1" Grid.RowSpan="3" Grid.Column="0" BorderBrush="Black" BorderThickness="0.5"/>
+    <Border Grid.Row="1" Grid.RowSpan="3" Grid.Column="1" BorderBrush="Black" BorderThickness="0.5"/>
+    <Border Grid.Row="4" Grid.RowSpan="2" Grid.Column="0" BorderBrush="Black" BorderThickness="0.5"/>
+    <Border Grid.Row="4" Grid.RowSpan="2" Grid.Column="1" BorderBrush="Black" BorderThickness="0.5"/>
+
+    <Menu Grid.ColumnSpan="2">
+      <MenuItem Header="Datei">
+        <MenuItem Header="Laden" Command="{Binding LoadCommand}">
+          <MenuItem.Icon>
+            <Image Source="Icons/load.png"/>
+          </MenuItem.Icon>
+        </MenuItem>
+        <MenuItem Header="Speichern" Command="{Binding SaveCommand}">
+          <MenuItem.Icon>
+            <Image Source="Icons/save.png"/>
+          </MenuItem.Icon>
+        </MenuItem>
+      </MenuItem>
+      <MenuItem Header="Extras">
+        <MenuItem Header="Mindestrate berechnen..." Command="{Binding MinimumRepaymentCommand}">
+          <MenuItem.Icon>
+            <Image Source="Icons/euro.png"/>
+          </MenuItem.Icon>
+        </MenuItem>
+      </MenuItem>
+      <MenuItem Header="Hilfe">
+        <MenuItem Header="Info..." Click="InfoClicked">
+          <MenuItem.Icon>
+            <Image Source="Icons/info.png"/>
+          </MenuItem.Icon>
+        </MenuItem>
+      </MenuItem>
+    </Menu>
+
+    <vw:KreditszenarioView Grid.Row="1"/>
+    <vw:RatenplanView Grid.Row="2"/>
+    <vw:SondertilgungView Grid.Row="1" Grid.Column="1"/>
+    <vw:SondertilgungsplanView Grid.Row="2" Grid.Column="1"/>
+
   </Grid>
 </Window>

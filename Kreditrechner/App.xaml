@@ -3,7 +3,36 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:Kreditrechner"
              StartupUri="MainWindow.xaml">
-    <Application.Resources>
-         
-    </Application.Resources>
+  <Application.Resources>
+
+    <LinearGradientBrush x:Key="ListBackground" Opacity="0.75" EndPoint="0.5,0" StartPoint="0.5,1">
+      <GradientStop Color="Gray" Offset="0"/>
+      <GradientStop Color="White" Offset="1"/>
+    </LinearGradientBrush>
+
+    <Style TargetType="{x:Type Control}" x:Key="StandardFont">
+      <Setter Property="FontFamily" Value="Arial"/>
+      <Setter Property="FontSize" Value="16"/>
+    </Style>
+
+    <Style TargetType="{x:Type Control}" x:Key="StandardMenuItemFont">
+      <Setter Property="FontFamily" Value="Arial"/>
+      <Setter Property="FontSize" Value="14"/>
+    </Style>
+
+    <Style TargetType="Label" BasedOn="{StaticResource ResourceKey=StandardFont}"/>
+
+    <Style TargetType="TextBox" BasedOn="{StaticResource ResourceKey=StandardFont}"/>
+
+    <Style TargetType="Button" BasedOn="{StaticResource ResourceKey=StandardFont}"/>
+
+    <Style TargetType="ComboBox" BasedOn="{StaticResource ResourceKey=StandardFont}"/>
+
+    <Style TargetType="TabItem" BasedOn="{StaticResource ResourceKey=StandardFont}"/>
+
+    <Style TargetType="RadioButton" BasedOn="{StaticResource ResourceKey=StandardFont}"/>
+
+    <Style TargetType="MenuItem" BasedOn="{StaticResource ResourceKey=StandardMenuItemFont}"/>
+
+  </Application.Resources>
 </Application>

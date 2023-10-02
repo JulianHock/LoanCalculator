@@ -12,7 +12,7 @@ using System.Windows;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Kreditrechner")]
-[assembly: AssemblyCopyright("Copyright ©  2023")]
+[assembly: AssemblyCopyright("Copyright @ 2023 Julian Hock")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
