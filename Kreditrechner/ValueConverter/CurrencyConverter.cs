@@ -22,6 +22,7 @@ namespace Kreditrechner.ValueConverter
       string val = (string)value;
 
       val = val.Replace("€", "").Trim();
+      val = val.Replace("$", "").Trim();
 
       decimal result;
       if (!decimal.TryParse(val, out result))

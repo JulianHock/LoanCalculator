@@ -7,7 +7,7 @@
         xmlns:vc="clr-namespace:Kreditrechner.ValueConverter"
         xmlns:loc="clr-namespace:Kreditrechner.Properties"
         mc:Ignorable="d"
-        Title="Mindestrate berechnen" Height="250" Width="400" WindowStartupLocation="CenterOwner">
+        Title="{x:Static loc:Resources.CalculateMinimumRepaymentToolTip}" Height="250" Width="400" WindowStartupLocation="CenterOwner">
 
   <Window.DataContext>
     <local:MinimumRepaymentViewModel/>
@@ -39,22 +39,32 @@
     <Label Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Content="{x:Static loc:Resources.MinimumRepayment}"/>
     <Label Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Content="{x:Static loc:Resources.Interest}"/>
     <TextBox Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" MinWidth="120" VerticalAlignment="Center" Text="{Binding LoanAmount, Converter={StaticResource currencyConverter}}" GotFocus="TextBox_GotFocus">
-      <TextBox.ToolTip>Betrag des Kredits</TextBox.ToolTip>
+      <TextBox.ToolTip>
+        <TextBlock Text="{x:Static loc:Resources.LoanAmountToolTip}"/>
+      </TextBox.ToolTip>
     </TextBox>
     <TextBox Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" MinWidth="120" VerticalAlignment="Center" Text="{Binding MinimumRepayment, Converter={StaticResource percentConverter}}" GotFocus="TextBox_GotFocus">
-      <TextBox.ToolTip>Höhe der Mindesttilgung</TextBox.ToolTip>
+      <TextBox.ToolTip>
+        <TextBlock Text="{x:Static loc:Resources.MinimumRepaymentToolTip}"/>
+      </TextBox.ToolTip>
     </TextBox>
     <TextBox Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" MinWidth="120" VerticalAlignment="Center" Text="{Binding Interest, Converter={StaticResource percentConverter}}" GotFocus="TextBox_GotFocus">
-      <TextBox.ToolTip>Höhe des effektiven Jahreszinses</TextBox.ToolTip>
+      <TextBox.ToolTip>
+        <TextBlock Text="{x:Static loc:Resources.InterestToolTip}"/>
+      </TextBox.ToolTip>
     </TextBox>
 
     <Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="5" Click="SetButtonFocus" IsDefault="True" Command="{Binding CalculateCommand}" Content="{x:Static loc:Resources.Calculate}">
-      <Button.ToolTip>Mindestrate berechnen</Button.ToolTip>
+      <Button.ToolTip>
+        <TextBlock Text="{x:Static loc:Resources.CalculateMinimumRepaymentToolTip}"/>
+      </Button.ToolTip>
     </Button>
 
     <Label Grid.Row="4" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Content="{x:Static loc:Resources.MinimumMonthlyRate}"/>
     <TextBox Grid.Row="4" Grid.Column="1" HorizontalAlignment="Left" MinWidth="120" VerticalAlignment="Center" Text="{Binding MinimumMonthlyRate, Converter={StaticResource currencyConverter}}" GotFocus="TextBox_GotFocus">
-      <TextBox.ToolTip>Betrag der monatlich mindestens gezahlt werden muss, um Mindesttilgung zu erfüllen</TextBox.ToolTip>
+      <TextBox.ToolTip>
+        <TextBlock Text="{x:Static loc:Resources.MinimumMonthlyRateToolTip}"/>
+      </TextBox.ToolTip>
     </TextBox>
   </Grid>
 </Window>

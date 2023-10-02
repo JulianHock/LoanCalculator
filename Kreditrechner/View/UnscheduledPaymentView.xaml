@@ -43,14 +43,13 @@
       <Label Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Content="{x:Static loc:Resources.Amount}"/>
       <TextBox Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" MinWidth="120" VerticalAlignment="Center" Text="{Binding UnscheduledPaymentMonth}" GotFocus="TextBox_GotFocus">
         <TextBox.ToolTip>
-          <TextBlock>
-            Monat in dem die Sonderzahlung getätigt werden soll<LineBreak/> 
-            Kann auch über Ratenplan ausgewählt werden
-          </TextBlock>
+          <TextBlock Text="{x:Static loc:Resources.UnscheduledRepaymentMonthToolTip}"/>
         </TextBox.ToolTip>
       </TextBox>
       <TextBox Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" MinWidth="120" VerticalAlignment="Center" Text="{Binding UnscheduledPaymentAmount, Converter={StaticResource currencyConverter}}" GotFocus="TextBox_GotFocus">
-        <TextBox.ToolTip>Betrag der Sondertilgung</TextBox.ToolTip>
+        <TextBox.ToolTip>
+          <TextBlock Text="{x:Static loc:Resources.UnscheduledRepaymentAmountToolTip}"/>
+        </TextBox.ToolTip>
       </TextBox>
     </Grid>
     
@@ -61,10 +60,14 @@
       </Grid.ColumnDefinitions>
 
       <Button Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="15" Padding="5" Command="{Binding AddUnscheduledPaymentCommand}" Content="{x:Static loc:Resources.Add}">
-        <Button.ToolTip>Sondertilgung hinzufügen</Button.ToolTip>
+        <Button.ToolTip>
+          <TextBlock Text="{x:Static loc:Resources.AddUnscheduledRepaymentToolTip}"/>
+        </Button.ToolTip>
       </Button>
       <Button Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="15" Padding="5" Click="SetButtonFocus" Command="{Binding RemoveUnscheduledPaymentCommand}" Content="{x:Static loc:Resources.Remove}">
-        <Button.ToolTip>Ausgewählte Sondertilgung löschen</Button.ToolTip>
+        <Button.ToolTip>
+          <TextBlock Text="{x:Static loc:Resources.RemoveUnscheduledRepaymentToolTip}"/>
+        </Button.ToolTip>
       </Button>
     </Grid>
     

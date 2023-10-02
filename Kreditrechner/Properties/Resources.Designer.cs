@@ -70,6 +70,15 @@ namespace Kreditrechner.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add unscheduled repayment.
+        /// </summary>
+        public static string AddUnscheduledRepaymentToolTip {
+            get {
+                return ResourceManager.GetString("AddUnscheduledRepaymentToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Amount:.
         /// </summary>
         public static string Amount {
@@ -93,6 +102,24 @@ namespace Kreditrechner.Properties {
         public static string Calculate {
             get {
                 return ResourceManager.GetString("Calculate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Calculate loan scenario.
+        /// </summary>
+        public static string CalculateButtonToolTip {
+            get {
+                return ResourceManager.GetString("CalculateButtonToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Calculate minimum rate.
+        /// </summary>
+        public static string CalculateMinimumRepaymentToolTip {
+            get {
+                return ResourceManager.GetString("CalculateMinimumRepaymentToolTip", resourceCulture);
             }
         }
         
@@ -133,11 +160,29 @@ namespace Kreditrechner.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Amount of the annual percentage rate of charge.
+        /// </summary>
+        public static string InterestToolTip {
+            get {
+                return ResourceManager.GetString("InterestToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Loan Amount:.
         /// </summary>
         public static string LoanAmount {
             get {
                 return ResourceManager.GetString("LoanAmount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Amount of the loan.
+        /// </summary>
+        public static string LoanAmountToolTip {
+            get {
+                return ResourceManager.GetString("LoanAmountToolTip", resourceCulture);
             }
         }
         
@@ -151,6 +196,69 @@ namespace Kreditrechner.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to About....
+        /// </summary>
+        public static string MenuBarAbout {
+            get {
+                return ResourceManager.GetString("MenuBarAbout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Calculate minimum rate....
+        /// </summary>
+        public static string MenuBarCalculateMinimumRate {
+            get {
+                return ResourceManager.GetString("MenuBarCalculateMinimumRate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Extras.
+        /// </summary>
+        public static string MenuBarExtras {
+            get {
+                return ResourceManager.GetString("MenuBarExtras", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to File.
+        /// </summary>
+        public static string MenuBarFile {
+            get {
+                return ResourceManager.GetString("MenuBarFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Help.
+        /// </summary>
+        public static string MenuBarHelp {
+            get {
+                return ResourceManager.GetString("MenuBarHelp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Load.
+        /// </summary>
+        public static string MenuBarLoad {
+            get {
+                return ResourceManager.GetString("MenuBarLoad", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save.
+        /// </summary>
+        public static string MenuBarSave {
+            get {
+                return ResourceManager.GetString("MenuBarSave", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Minimum montly rate:.
         /// </summary>
         public static string MinimumMonthlyRate {
@@ -160,11 +268,29 @@ namespace Kreditrechner.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Minimum monthly amount that must be paid to meet minimum repayment requirements.
+        /// </summary>
+        public static string MinimumMonthlyRateToolTip {
+            get {
+                return ResourceManager.GetString("MinimumMonthlyRateToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Minimum Repayment:.
         /// </summary>
         public static string MinimumRepayment {
             get {
                 return ResourceManager.GetString("MinimumRepayment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Amount of the minimum repayment.
+        /// </summary>
+        public static string MinimumRepaymentToolTip {
+            get {
+                return ResourceManager.GetString("MinimumRepaymentToolTip", resourceCulture);
             }
         }
         
@@ -214,6 +340,24 @@ namespace Kreditrechner.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Monthly installment that is repaid.
+        /// </summary>
+        public static string RateResultToolTip {
+            get {
+                return ResourceManager.GetString("RateResultToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Calculate term at given rate.
+        /// </summary>
+        public static string RateToolTip {
+            get {
+                return ResourceManager.GetString("RateToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Remaining debt.
         /// </summary>
         public static string RemainingDebtInstallmentPlan {
@@ -232,11 +376,29 @@ namespace Kreditrechner.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Remove unscheduled repayment.
+        /// </summary>
+        public static string RemoveUnscheduledRepaymentToolTip {
+            get {
+                return ResourceManager.GetString("RemoveUnscheduledRepaymentToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Repayment at begin:.
         /// </summary>
         public static string RepaymentAtBegin {
             get {
                 return ResourceManager.GetString("RepaymentAtBegin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Amount of repayment of the total sum in the first month seen on the whole year.
+        /// </summary>
+        public static string RepaymentAtBeginToolTip {
+            get {
+                return ResourceManager.GetString("RepaymentAtBeginToolTip", resourceCulture);
             }
         }
         
@@ -259,6 +421,33 @@ namespace Kreditrechner.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Term of the credit.
+        /// </summary>
+        public static string TermResultToolTip {
+            get {
+                return ResourceManager.GetString("TermResultToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Calculate rate for given term.
+        /// </summary>
+        public static string TermToolTip {
+            get {
+                return ResourceManager.GetString("TermToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Loan Calculator.
+        /// </summary>
+        public static string Title {
+            get {
+                return ResourceManager.GetString("Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Total Interest:.
         /// </summary>
         public static string TotalInterest {
@@ -268,11 +457,29 @@ namespace Kreditrechner.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sum of the interest to be paid over the term.
+        /// </summary>
+        public static string TotalInterestToolTip {
+            get {
+                return ResourceManager.GetString("TotalInterestToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Total Repayment:.
         /// </summary>
         public static string TotalRepayment {
             get {
                 return ResourceManager.GetString("TotalRepayment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total amount incl. interest to be repaid over the term of the loan.
+        /// </summary>
+        public static string TotalRepaymentToolTip {
+            get {
+                return ResourceManager.GetString("TotalRepaymentToolTip", resourceCulture);
             }
         }
         
@@ -300,6 +507,25 @@ namespace Kreditrechner.Properties {
         public static string UnscheduledPaymentPlan {
             get {
                 return ResourceManager.GetString("UnscheduledPaymentPlan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Amount of the unscheduled repayment.
+        /// </summary>
+        public static string UnscheduledRepaymentAmountToolTip {
+            get {
+                return ResourceManager.GetString("UnscheduledRepaymentAmountToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Month in which the special payment is to be made
+        ///Can also be selected via installment plan.
+        /// </summary>
+        public static string UnscheduledRepaymentMonthToolTip {
+            get {
+                return ResourceManager.GetString("UnscheduledRepaymentMonthToolTip", resourceCulture);
             }
         }
     }

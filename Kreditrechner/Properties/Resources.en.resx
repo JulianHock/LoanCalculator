@@ -120,6 +120,9 @@
   <data name="Add" xml:space="preserve">
     <value>Add</value>
   </data>
+  <data name="AddUnscheduledRepaymentToolTip" xml:space="preserve">
+    <value>Add unscheduled repayment</value>
+  </data>
   <data name="Amount" xml:space="preserve">
     <value>Amount:</value>
   </data>
@@ -128,6 +131,12 @@
   </data>
   <data name="Calculate" xml:space="preserve">
     <value>Calculate</value>
+  </data>
+  <data name="CalculateButtonToolTip" xml:space="preserve">
+    <value>Calculate loan scenario</value>
+  </data>
+  <data name="CalculateMinimumRepaymentToolTip" xml:space="preserve">
+    <value>Calculate minimum rate</value>
   </data>
   <data name="DateInstallmentPlan" xml:space="preserve">
     <value>Date</value>
@@ -141,17 +150,50 @@
   <data name="InterestInstallmentPlan" xml:space="preserve">
     <value>Interest</value>
   </data>
+  <data name="InterestToolTip" xml:space="preserve">
+    <value>Amount of the annual percentage rate of charge</value>
+  </data>
   <data name="LoanAmount" xml:space="preserve">
     <value>Loan Amount:</value>
+  </data>
+  <data name="LoanAmountToolTip" xml:space="preserve">
+    <value>Amount of the loan</value>
   </data>
   <data name="LoanScenario" xml:space="preserve">
     <value>Loan Scenario</value>
   </data>
+  <data name="MenuBarAbout" xml:space="preserve">
+    <value>About...</value>
+  </data>
+  <data name="MenuBarCalculateMinimumRate" xml:space="preserve">
+    <value>Calculate minimum rate...</value>
+  </data>
+  <data name="MenuBarExtras" xml:space="preserve">
+    <value>Extras</value>
+  </data>
+  <data name="MenuBarFile" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="MenuBarHelp" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="MenuBarLoad" xml:space="preserve">
+    <value>Load</value>
+  </data>
+  <data name="MenuBarSave" xml:space="preserve">
+    <value>Save</value>
+  </data>
   <data name="MinimumMonthlyRate" xml:space="preserve">
     <value>Minimum montly rate:</value>
   </data>
+  <data name="MinimumMonthlyRateToolTip" xml:space="preserve">
+    <value>Minimum monthly amount that must be paid to meet minimum repayment requirements</value>
+  </data>
   <data name="MinimumRepayment" xml:space="preserve">
     <value>Minimum Repayment:</value>
+  </data>
+  <data name="MinimumRepaymentToolTip" xml:space="preserve">
+    <value>Amount of the minimum repayment</value>
   </data>
   <data name="Month" xml:space="preserve">
     <value>Month:</value>
@@ -168,14 +210,26 @@
   <data name="RateInInstallmentPlan" xml:space="preserve">
     <value>Rate</value>
   </data>
+  <data name="RateResultToolTip" xml:space="preserve">
+    <value>Monthly installment that is repaid</value>
+  </data>
+  <data name="RateToolTip" xml:space="preserve">
+    <value>Calculate term at given rate</value>
+  </data>
   <data name="RemainingDebtInstallmentPlan" xml:space="preserve">
     <value>Remaining debt</value>
   </data>
   <data name="Remove" xml:space="preserve">
     <value>Remove</value>
   </data>
+  <data name="RemoveUnscheduledRepaymentToolTip" xml:space="preserve">
+    <value>Remove unscheduled repayment</value>
+  </data>
   <data name="RepaymentAtBegin" xml:space="preserve">
     <value>Repayment at begin:</value>
+  </data>
+  <data name="RepaymentAtBeginToolTip" xml:space="preserve">
+    <value>Amount of repayment of the total sum in the first month seen on the whole year</value>
   </data>
   <data name="RepaymentInstallmentPlan" xml:space="preserve">
     <value>Repayment</value>
@@ -183,11 +237,26 @@
   <data name="Term" xml:space="preserve">
     <value>Term:</value>
   </data>
+  <data name="TermResultToolTip" xml:space="preserve">
+    <value>Term of the credit</value>
+  </data>
+  <data name="TermToolTip" xml:space="preserve">
+    <value>Calculate rate for given term</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Loan Calculator</value>
+  </data>
   <data name="TotalInterest" xml:space="preserve">
     <value>Total Interest:</value>
   </data>
+  <data name="TotalInterestToolTip" xml:space="preserve">
+    <value>Sum of the interest to be paid over the term</value>
+  </data>
   <data name="TotalRepayment" xml:space="preserve">
     <value>Total Repayment:</value>
+  </data>
+  <data name="TotalRepaymentToolTip" xml:space="preserve">
+    <value>Total amount incl. interest to be repaid over the term of the loan</value>
   </data>
   <data name="TypeInstallmentPlan" xml:space="preserve">
     <value>Type</value>
@@ -197,5 +266,12 @@
   </data>
   <data name="UnscheduledPaymentPlan" xml:space="preserve">
     <value>Unscheduled Payments Plan</value>
+  </data>
+  <data name="UnscheduledRepaymentAmountToolTip" xml:space="preserve">
+    <value>Amount of the unscheduled repayment</value>
+  </data>
+  <data name="UnscheduledRepaymentMonthToolTip" xml:space="preserve">
+    <value>Month in which the special payment is to be made
+Can also be selected via installment plan</value>
   </data>
 </root>
