@@ -33,7 +33,7 @@
               SelectionChanged="RatenplanSelectionChanged">
       <DataGrid.Columns>
         <DataGridTextColumn Header="{x:Static loc:Resources.Number}" Binding="{Binding Month}" Width="auto"/>
-        <DataGridTextColumn Header="{x:Static loc:Resources.DateInstallmentPlan}" Binding="{Binding Datum, Converter={StaticResource dateConverter}}" Width="*"/>
+        <DataGridTextColumn Header="{x:Static loc:Resources.DateInstallmentPlan}" Binding="{Binding Date, Converter={StaticResource dateConverter}}" Width="*"/>
         <DataGridTextColumn Header="{x:Static loc:Resources.RemainingDebtInstallmentPlan}" Binding="{Binding RemainingDebt, Converter={StaticResource currencyConverter}}" Width="*"/>
         <DataGridTextColumn Header="{x:Static loc:Resources.InterestInstallmentPlan}" Binding="{Binding Interest, Converter={StaticResource currencyConverter}}" Width="*"/>
         <DataGridTextColumn Header="{x:Static loc:Resources.RepaymentInstallmentPlan}" Binding="{Binding Repayment, Converter={StaticResource currencyConverter}}" Width="*"/>
