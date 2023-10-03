@@ -62,7 +62,7 @@ jobs:
 
     - name: Zip artifacts
       run: |
-        $directoryToZip = "./Kreditrechner/bin"
+        $directoryToZip = "./Kreditrechner/bin/Release/*.*"
         $zipFileName = "LoanCalculator.zip"
         Compress-Archive -Path $directoryToZip -DestinationPath $zipFileName
 
