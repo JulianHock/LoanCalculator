@@ -21,7 +21,7 @@
     <Grid.RowDefinitions>
       <RowDefinition Height="auto"/>
       <RowDefinition Height="*"/>
-      <RowDefinition Height="*"/>
+      <RowDefinition Height="auto"/>
     </Grid.RowDefinitions>
     
     <Label Grid.Row="0" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="LightGray" Margin="1">

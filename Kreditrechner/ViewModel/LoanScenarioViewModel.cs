@@ -386,7 +386,9 @@ namespace Kreditrechner.ViewModel
       var restLoanAmount = LoanAmount;
       var currentMonth = 1M;
 
-      DateTime dateTime = new DateTime(DateTime.Now.Year, DateTime.Now.Month + 1, 1);
+      DateTime dateTime = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
+
+      dateTime = dateTime.AddMonths(1);
 
       while (restLoanAmount > 0)
       {

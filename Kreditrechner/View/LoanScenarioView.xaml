@@ -98,10 +98,10 @@
           <TextBlock Text="{x:Static loc:Resources.RepaymentAtBeginToolTip}"/>
         </TextBox.ToolTip>
       </TextBox>
-      <Label Grid.Row="2" Grid.Column="2" Content="{Binding DifferenceRate, Converter={StaticResource diffCurrencyConverter}}" Foreground="{Binding RateDifferenceColor}"/>
-      <Label Grid.Row="3" Grid.Column="2" Content="{Binding DifferenceTerm, Converter={StaticResource diffYearConverter}}" Foreground="{Binding TermDifferenceColor}"/>
-      <Label Grid.Row="0" Grid.Column="5" Content="{Binding InterestTotalDifference, Converter={StaticResource diffCurrencyConverter}}" Foreground="{Binding InterestDifferenceColor}"/>
-      <Label Grid.Row="2" Grid.Column="5" Content="{Binding DifferenceRepaymentAtBegin, Converter={StaticResource diffPercentConverter}}" Foreground="{Binding RepaymentDifferenceColor}"/>
+      <Label Grid.Row="2" Grid.Column="2" Content="{Binding DifferenceRate, Converter={StaticResource diffCurrencyConverter}}" FontWeight="SemiBold" Foreground="{Binding RateDifferenceColor}"/>
+      <Label Grid.Row="3" Grid.Column="2" Content="{Binding DifferenceTerm, Converter={StaticResource diffYearConverter}}" FontWeight="SemiBold" Foreground="{Binding TermDifferenceColor}"/>
+      <Label Grid.Row="0" Grid.Column="5" Content="{Binding InterestTotalDifference, Converter={StaticResource diffCurrencyConverter}}" FontWeight="SemiBold" Foreground="{Binding InterestDifferenceColor}"/>
+      <Label Grid.Row="2" Grid.Column="5" Content="{Binding DifferenceRepaymentAtBegin, Converter={StaticResource diffPercentConverter}}" FontWeight="SemiBold" Foreground="{Binding RepaymentDifferenceColor}"/>
     </Grid>
 
     <Button Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="15" Padding="5" Command="{Binding CalculateCommand}" Click="SetButtonFocus" IsDefault="True" Content="{x:Static loc:Resources.Calculate}">
